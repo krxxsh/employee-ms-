@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Employee Dashboard</title>
+</head>
+<body onload="checkEmployeeLogin()">
+
+<header>
+    <h1>Employee Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+    <h2>Your Profile</h2>
+    <table id="profileTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Join Date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h3>Request Leave</h3>
+    <form id="leaveRequestForm">
+        <input type="date" id="leaveDate" required>
+        <input type="text" id="leaveReason" placeholder="Reason for Leave" required>
+        <button type="submit">Request Leave</button>
+    </form>
+    <p id="leaveStatus"></p>
+
+    <h3>Your Leave Status</h3>
+    <table id="employeeLeaveTable">
+        <thead>
+            <tr>
+                <th>Leave Date</th>
+                <th>Reason</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

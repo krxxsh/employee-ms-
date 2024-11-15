@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Admin Dashboard</title>
+</head>
+<body onload="checkAdminLogin()">
+
+<header>
+    <h1>Admin Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+    <h2>Add New Employee</h2>
+    <form id="addEmployeeForm">
+        <input type="text" id="empName" placeholder="Employee Name" required>
+        <input type="date" id="empJoinDate" required>
+        <select id="empRole">
+            <option value="Developer">Developer</option>
+            <option value="Designer">Designer</option>
+            <option value="Manager">Manager</option>
+        </select>
+        <input type="text" id="empUsername" placeholder="Employee Username" required>
+        <input type="password" id="empPassword" placeholder="Employee Password" required>
+        <input type="number" id="empSalary" placeholder="Salary" required>
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <h3>Employee List</h3>
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Join Date</th>
+                <th>Role</th>
+                <th>Username</th>
+                <th>Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h3>Leave Requests</h3>
+    <table id="leaveRequestsTable">
+        <thead>
+            <tr>
+                <th>Employee Name</th>
+                <th>Leave Date</th>
+                <th>Reason</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
